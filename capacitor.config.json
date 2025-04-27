@@ -1,0 +1,12 @@
+{
+  "appId": "com.example.app",
+  "appName": "code",
+  "npmClient": "yarn",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
