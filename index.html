@@ -1,11 +1,9 @@
-<!-- <!doctype html> -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>⏰</title>
-    <!-- <title> {{ formattedDurationMin }} : {{ formattedDurationTimeSec }}</title> -->
     <style type="text/css">
       #Loading {
         top: 50%;
@@ -76,40 +74,15 @@
   </body>
 </html>
 <script>
-  // let a = 1;
-  // document.title = a;
-</script>
-<!-- <script src="./App.vue">
-  // 设置倒计时的时间（这里以秒为单位）
-  var countdownTime = 100;
+  // 获取当前 URL 的路径部分
+  const path = window.location.pathname;
 
-  function updateTitle() {
-    // 减少倒计时时间
-    countdownTime--;
-  
-    // 更新页面标题
-    document.title = countdownTime ;
-  
-    // 如果倒计时未结束，则继续倒计时
-    if (countdownTime > 0) {
-      setTimeout(updateTitle, 1000);
-    } else {
-      // 倒计时结束，可以在这里添加结束时的操作
-      document.title = "倒计时结束";
-    }
+  // 根据路径跳转到相应的本地音频文件
+  if (path === '/A') {
+    window.location.href = '/static/休息声音.wav';
+  } else if (path === '/B') {
+    window.location.href = '/static/专注声音.mp3';
+  } else if (path === '/C') {
+    window.location.href = '/static/提示音C.mp3';
   }
-  window.onload = updateTitle;
-</script> -->
-<!-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>⏰</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html> -->
+</script>
