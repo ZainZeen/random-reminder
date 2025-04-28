@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⏰</title>
+    <!-- <title> {{ formattedDurationMin }} : {{ formattedDurationTimeSec }}</title> -->
+    <style type="text/css">
+      #Loading {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+        z-index: 100;
+      }
+      @-webkit-keyframes ball-beat {
+        50% {
+          opacity: 0.2;
+          -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }  
+      @keyframes ball-beat {
+        50% {
+          opacity: 0.2;
+          -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      .ball-beat>div {
+        background-color: #279fcf;
+        width: 15px;
+        height: 15px;
+        border-radius: 100% !important;
+        margin: 2px;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        display: inline-block;
+        -webkit-animation: ball-beat 0.7s 0s infinite linear;
+        animation: ball-beat 0.7s 0s infinite linear;
+      }
+      .ball-beat>div:nth-child(2n-1) {
+        -webkit-animation-delay: 0.35s !important;
+        animation-delay: 0.35s !important;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-BKvmdskw.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-xL5gq3Q3.css">
+  </head>
+  <body>
+    <noscript>
+      <strong>非常抱歉！您当前浏览器不支持，请移步至更高版本！</strong>
+    </noscript>
+    <div id="app">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <div class="load_title">正在加载系统,请耐心等待
+          <br>
+          <span>V1.3</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- <script src="./App.vue">
+  // 设置倒计时的时间（这里以秒为单位）
+  var countdownTime = 100;
+
+  function updateTitle() {
+    // 减少倒计时时间
+    countdownTime--;
+  
+    // 更新页面标题
+    document.title = countdownTime ;
+  
+    // 如果倒计时未结束，则继续倒计时
+    if (countdownTime > 0) {
+      setTimeout(updateTitle, 1000);
+    } else {
+      // 倒计时结束，可以在这里添加结束时的操作
+      document.title = "倒计时结束";
+    }
+  }
+  window.onload = updateTitle;
+</script> -->
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⏰</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html> -->
