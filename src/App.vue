@@ -133,18 +133,30 @@ input[type=number]::-webkit-outer-spin-button {
     height: 40px;
     line-height: 40px;
   } 
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直居中对齐 */
+    height: 60px;
+    padding: 0 20px; 
+    position: fixed;
+    top: 3.6%;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+  }
   .homepage {
     position: absolute;
-    top: 6%; /* 根据需要调整 */
-    left: 5%; /* 将按钮放置在左上角 */
+    // top: 6%; /* 根据需要调整 */
+    left: 5%; 
     cursor: pointer;
     font-size: larger !important;
     color: #000;
   }
   .tool-container {
     position: absolute;
-    top: 4%; /* 根据需要调整 */
-    right: 3%; /* 将按钮放置在右上角 */
+    // top: 4%; /* 根据需要调整 */
+    right: 3%; 
     cursor: pointer;
   }
   .tool {
@@ -357,7 +369,7 @@ input:checked + .toggle-slider:before {
 }
 
 .site-footer {
-  background-color: #5B5656; 
+  background-color: #333;  /* #5B5656 */
   color: #A19D9D; 
   padding: 20px 0; 
   width: 100%; 
@@ -409,6 +421,9 @@ input:checked + .toggle-slider:before {
     bottom: -50%; 
     overflow-y: auto;
   }
+  .display-column {
+    display: none; /* 仅隐藏带有 display-column 类的元素 */
+  }
 }
 </style>
 
@@ -419,7 +434,7 @@ input:checked + .toggle-slider:before {
         <div class="homepage" ref="homepageRef"><b>网站主页</b></div>
         <div class="tool-container">
           <img class="tool" v-bind:src="volume" alt="铃声/静音" @click="toggleMute">
-          <a href="www.baidu.com">
+          <a href="https://www.yuque.com/u43692620/yyl2g7/xsd0kkos7yzok1x9?singleDoc#" target="_blank">
             <img class="tool" src="/static/疑问.png" alt="疑问" @click="showPopup = !showPopup" >
           </a>
           <img class="tool" src="/static/设置.png" alt="Settings" @click="toggleSettings">
@@ -555,20 +570,20 @@ input:checked + .toggle-slider:before {
             <div class="footer-column">
               <h4><a class="footer-fontStyle1" href="https://beian.miit.gov.cn/?spm=a313x.collections_index.i7.3.d50a3a81XeVKfC#/Integrated/index" target="_blank">粤ICP备2025407260号</a></h4>
             </div>
-            <div class="footer-column">
-              <h4 class="footer-fontStyle1">MADE BY XXX</h4>
+            <div class="footer-column display-column">
+              <h4 class="footer-fontStyle1"></h4>
             </div>
             <div class="footer-column">
-              <h4><a class="footer-fontStyle2" href="https://www.bilibili.com" target="_blank">bilibili</a></h4>
+              <h4><a class="footer-fontStyle2" href="https://space.bilibili.com/2229541" target="_blank">bilibili</a></h4>
             </div>
             <div class="footer-column">
-              <h4><a class="footer-fontStyle2" href="" target="_blank">YouTube</a></h4>
+              <h4><a class="footer-fontStyle2" href="https://www.youtube.com/@%E6%8B%A9%E6%81%A9" target="_blank">YouTube</a></h4>
             </div>
             <div class="footer-column">
-              <h4><a class="footer-fontStyle2" href="" target="_blank">小红书</a></h4>
+              <h4><a class="footer-fontStyle2" href="https://www.xiaohongshu.com/user/profile/67f75c3b000000000d0087a2?xsec_token=YBJ6OWTehSqVc3T1f95vfHqtqnD61CCW8U4KPRmQcAaT4=&xsec_source=app_share&xhsshare=CopyLink&appuid=67f75c3b000000000d0087a2&apptime=1745817830&share_id=39bdce69a9794581b93c81f30140b902" target="_blank">小红书</a></h4>
             </div>
             <div class="footer-column">
-              <h4><a class="footer-fontStyle2" href="" target="_blank">知乎</a></h4>
+              <h4><a class="footer-fontStyle2" href="https://www.zhihu.com/people/ZainZeen" target="_blank">知乎</a></h4>
             </div>
           </div>
         </div>
@@ -629,8 +644,8 @@ export default {
       randomTimeSec: null, // 存储随机选择的时间点（秒）
       audio1Played: false, // 用于标记第一个音频是否已播放
       audio2Played: false, // 用于标记是否准备播放第二个音频
-      audioPath1: '/static/提示音A.mp3', // 音频文件路径
-      audioPath2: '/static/提示音B.mp3', // 音频文件路径
+      audioPath1: '/static/提示音A.mp3', // 音频文件路径（休息）
+      audioPath2: '/static/提示音B.mp3', // 音频文件路径（专注）
       audioPath3: '/static/提示音C.mp3', // 音频文件路径（结束）
       isInMinutes: true, // 默认单位为分钟
       isInMinutes1: false, // 默认单位为秒
